@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+var
+*.local
+.env
+.env.local
+.DS_Store
+npm-debug.log*
