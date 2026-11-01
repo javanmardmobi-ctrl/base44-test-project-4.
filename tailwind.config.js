@@ -30,6 +30,15 @@ export default {
       transitionTimingFunction: {
         premium: 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
+      keyframes: {
+        'scroll-cue': {
+          '0%': { transform: 'translateY(-120%)' },
+          '70%, 100%': { transform: 'translateY(260%)' },
+        },
+      },
+      animation: {
+        'scroll-cue': 'scroll-cue 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite',
+      },
     },
   },
   plugins: [],

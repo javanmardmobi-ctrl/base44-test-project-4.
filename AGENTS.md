@@ -21,6 +21,27 @@ Two services run in the sandbox via `docker-compose.base44.yml`:
   renders on networks that block third-party hosts. The hero image is eager; everything else
   is lazy-loaded.
 
+## Cinematic scroll film
+
+- The hero film is the client-supplied villa video, stored locally in `public/media/`:
+  `villa-scroll.mp4` (1920×1080, ~6 MB, audio stripped), `villa-scroll-mobile.mp4` (960 px
+  wide, ~0.9 MB, used below 820 px viewport) and `villa-poster.jpg` (frame 0, also preloaded
+  from `index.html`). All three were produced from the same source with
+  `-movflags +faststart`; without that flag the `moov` atom trails the media data and
+  `loadedmetadata` waits for the whole download.
+- The film is **never played**. `src/hooks/useScrollVideo.ts` maps the scroll progress of the
+  tall pinned hero (`h-[460vh] lg:h-[520vh]` in `Hero.tsx`) onto `video.currentTime` on every
+  animation frame, easing towards the target so a fast flick never leaves the decoder behind.
+  Scrolling up reverses the film. Keep the element `muted`/`playsInline` and never call
+  `play()`; seeking is what advances it.
+- Overlay copy (headline plus the three chapters) is driven by the same per-frame callback and
+  written straight to element styles — no React state per frame, so scrolling stays at 60 fps.
+- `prefers-reduced-motion` swaps the film for the poster and drops the pinning; the loading
+  curtain (`Preloader`) only appears for the scrubbed path.
+- To regenerate the assets from a new upload (ffmpeg is not installed on the sandbox host, so
+  run it in a container):
+  `docker run --rm -v "$PWD/public/media:/m" mwader/static-ffmpeg:latest -i /m/source.mp4 -c copy -an -movflags +faststart /m/villa-scroll.mp4`
+
 ## Verifying
 
 ```bash
