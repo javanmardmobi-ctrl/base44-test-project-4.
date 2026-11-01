@@ -16,7 +16,10 @@ Two services run in the sandbox via `docker-compose.base44.yml`:
 - The Vite config adds a `.${BASE44_SANDBOX_HOST_DOMAIN}` allowed-host wildcard only when
   `BASE44_PREVIEW_MODE === '1'`; outside preview mode Vite's default host checking applies
   unchanged. The dev server binds `0.0.0.0` so the preview proxy can reach it.
-- Photography is loaded from the Unsplash CDN. No image files are stored in the repo.
+- Photography lives in `public/images/` with descriptive filenames and is referenced by
+  root-relative paths (`/images/...`). Nothing loads from an external image CDN, so the site
+  renders on networks that block third-party hosts. The hero image is eager; everything else
+  is lazy-loaded.
 
 ## Verifying
 

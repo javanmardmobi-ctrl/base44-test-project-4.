@@ -18,6 +18,14 @@ export function Services() {
           eyebrow="Our Services"
           title="Considered Advice at Every Stage"
           description="Four disciplines, one standard of care — whether you are buying, selling, investing or entrusting us with a home."
+          actions={
+            <img
+              src="/images/service-architectural-interior.jpg"
+              alt="Concrete and oak dining space in a contemporary Horizon residence"
+              loading="lazy"
+              className="h-40 w-full rounded-2xl object-cover sm:h-44 sm:w-80 lg:h-48 lg:w-96"
+            />
+          }
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">

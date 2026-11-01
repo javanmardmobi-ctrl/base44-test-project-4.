@@ -12,7 +12,7 @@ export type Property = {
   description: string
 }
 
-/** Photography is served from Unsplash's CDN so every card loads a real architectural shot. */
+/** Photography is stored in `public/images` so every card loads from the app itself. */
 export const properties: Property[] = [
   {
     id: 'lakeside-modern-villa',
@@ -20,8 +20,7 @@ export const properties: Property[] = [
     location: 'Austin, Texas, USA',
     price: '$2.35 Million',
     type: 'Luxury Villa',
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+    image: '/images/property-lakeside-modern-villa.jpg',
     alt: 'Modern lakeside villa glowing at dusk with a reflecting pool',
     beds: 5,
     baths: 4,
@@ -35,8 +34,7 @@ export const properties: Property[] = [
     location: 'Los Angeles, California',
     price: '$3.80 Million',
     type: 'Modern House',
-    image:
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/property-contemporary-luxury-estate.jpg',
     alt: 'Contemporary two storey estate with landscaped gardens',
     beds: 6,
     baths: 5,
@@ -50,8 +48,7 @@ export const properties: Property[] = [
     location: 'Miami, Florida, USA',
     price: '$1.95 Million',
     type: 'Apartment',
-    image:
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/property-minimalist-modern-residence.jpg',
     alt: 'Minimalist white residence with clean geometric lines',
     beds: 3,
     baths: 3,
@@ -65,9 +62,8 @@ export const properties: Property[] = [
     location: 'Beverly Hills, California',
     price: '$4.25 Million',
     type: 'Luxury Villa',
-    image:
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Glass villa with pool at blue hour',
+    image: '/images/property-exclusive-glass-villa.jpg',
+    alt: 'Glass villa with a dark metal facade and pool at blue hour',
     beds: 5,
     baths: 6,
     area: '7,050 sq ft',
@@ -80,9 +76,8 @@ export const properties: Property[] = [
     location: 'Dallas, Texas, USA',
     price: '$1.65 Million',
     type: 'Modern House',
-    image:
-      'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Modern family home with a pool and lawn',
+    image: '/images/property-modern-family-residence.jpg',
+    alt: 'Modern family home with timber cladding, a pool and a lawn',
     beds: 4,
     baths: 3,
     area: '4,300 sq ft',

@@ -4,16 +4,16 @@ import { Reveal } from '../ui/Reveal'
 
 const images = [
   {
-    src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Modern two storey villa with a balcony and landscaped garden',
+    src: '/images/about-villa-exterior.jpg',
+    alt: 'Contemporary two storey villa with an infinity pool and landscaped terrace',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80',
-    alt: 'Warm minimalist living room with floor to ceiling windows',
+    src: '/images/about-living-room.jpg',
+    alt: 'Warm minimalist living room with oak panelling and floor to ceiling windows',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
-    alt: 'Villa swimming pool reflecting the evening sky',
+    src: '/images/about-pool-terrace.jpg',
+    alt: 'View from a modern interior out across a private pool terrace',
   },
 ]
 

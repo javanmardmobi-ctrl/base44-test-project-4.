@@ -1,8 +1,7 @@
 import { useState, type MouseEvent } from 'react'
 import { ArrowDown } from 'lucide-react'
 
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=85'
+const HERO_IMAGE = '/images/hero-villa-blue-hour.jpg'
 
 export function Hero() {
   const [offset, setOffset] = useState({ x: 0, y: 0 })

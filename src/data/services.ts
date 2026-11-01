@@ -49,8 +49,7 @@ export const testimonials = [
     name: 'Sarah Lindqvist',
     role: 'Villa purchase, Austin',
     rating: 5,
-    avatar:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
+    avatar: '/images/testimonial-sarah-lindqvist.jpg',
     quote:
       'Horizon found a house that was never publicly listed and negotiated it with real finesse. Every step felt considered, never hurried.',
   },
@@ -59,8 +58,7 @@ export const testimonials = [
     name: 'James Park',
     role: 'Investment portfolio, Miami',
     rating: 5,
-    avatar:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+    avatar: '/images/testimonial-james-park.jpg',
     quote:
       'Their yield modelling was more rigorous than the two advisory firms I had used before. Three acquisitions in, the numbers have held up.',
   },
@@ -69,8 +67,7 @@ export const testimonials = [
     name: 'Amelia Carter',
     role: 'Estate sale, Beverly Hills',
     rating: 5,
-    avatar:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    avatar: '/images/testimonial-amelia-carter.jpg',
     quote:
       'From photography to the final negotiation, the presentation of our home was extraordinary. It sold above asking in eleven days.',
   },
